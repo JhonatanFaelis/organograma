@@ -24,7 +24,11 @@ export const Formulario = (props) => {
         const [time, setTime] = useState('')
 
         const aoSalvar = (e) =>{
-            e.preventDefault()
+            e.preventDefault();
+            if(!nome || !cargo || !time){
+                alert('Necessario Preencher todas as informações')
+                return;
+            }
             //console.log(`O formulario foi submetido com a seguintes informações ${nome}, ${cargo}, ${imagem}, ${time}`)
 
             //pegando a função que esta no app.js e mandando o objeto para cadastro. 
@@ -34,7 +38,7 @@ export const Formulario = (props) => {
                 imagem,
                 time
             })
-
+            alert(`Colaborador ${nome} criado com sucesso!`)
             setNome('')
             setCargo('')
             setImagem('')

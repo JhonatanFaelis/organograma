@@ -50,7 +50,6 @@ const times = [
 const [colaboradores, setColaboradores] = useState([])
 
 const aoNovoColaboradorAdicionado = (colaborador) =>{
-  console.log(colaborador)
   //ou seja, estou espalhando o objeto recebido nesse array antigo e adicionando ele no final.
   setColaboradores([...colaboradores,colaborador])
 }
